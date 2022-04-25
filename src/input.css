@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Finlandica";
+    /*Название*/
+    src: url("fonts/Finlandica-Regular.eot");
+    /*Ссылка на eot формат шрифта*/
+    src: local("☺"), url("fonts/Finlandica-Regular.woff") format("woff"), 
+    url("fonts/Finlandica-Regular.ttf") format("truetype"), 
+    url("fonts/Finlandica-Regular.svg") format("svg");
+    font-weight: normal;
+    /*Какой шрифт по жирности*/
+    font-style: normal;
+    /*Какой шрифт по стилю*/
+}
+/*Шрифт с наклонном*/
+@font-face {
+  font-family: "Finlandica";
+  src: url("fonts/Finlandica-Italic.eot");
+  src: local("☺"), url("fonts/Finlandica-Italic.woff") format("woff"), url("fonts/Finlandica-Italic.ttf") format("truetype"), url("fonts/Finlandica-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+/*Жирный шрифт*/
+@font-face {
+  font-family: "Finlandica";
+  src: url("fonts/Finlandica-Bold.eot");
+  src: local("☺"), url("fonts/Finlandica-Bold.woff") format("woff"), url("fonts/Finlandica-Bold.ttf") format("truetype"), url("fonts/Finlandica-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+/*Шрифт с наконном и жирностью*/
+@font-face {
+  font-family: "Finlandica";
+  src: url("fonts/Finlandica-BoldItalic.eot");
+  src: local("☺"), url("fonts/Finlandica-BoldItalic.woff") format("woff"), url("fonts/Finlandica-BoldItalic.ttf") format("truetype"), url("fonts/Finlandica-BoldItalic.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch */
+/*Мои добавления*/
+body{
+  font-family: 'Finlandica';
+}
+*{
+  scroll-behavior: smooth;
+}
+a.button{
+  transition: all ease 0.3s;
+}
+a.button:hover{
+  text-shadow: 0 0 10px white;
+}
+#WorksExample #all_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#WorksExample #all_slider .slider {
+  width: 85%;
+  overflow: hidden;
+}
+#WorksExample #all_slider .slider .slider-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.9s ease all;
+  transition: 0.9s ease all;
+}
+@-webkit-keyframes navAnim {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes navAnim {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.fixed {
+  -webkit-animation: navAnim 0.5s;
+          animation: navAnim 0.5s;
+  display: fixed;
+  width: 100%;
+}
+@keyframes popupAnim{
+    0%{
+        top: -900px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+.active{
+  display: block;
+  animation: popupAnim 0.5s;
+}
+.disactive{
+  animation: popupAnim 0.5s reverse;
+  display: none;
+}
