@@ -1,4 +1,4 @@
-//
+//-------------------------------------------\/Адаптивность\/-------------------------------------------
 window.addEventListener("resize", function(){
     if(window.screen.width<=960){
         document.querySelector("#header-bottom-left-up p:first-of-type").innerHTML = "Ремесленная мастерская";
@@ -7,6 +7,7 @@ window.addEventListener("resize", function(){
         document.querySelector("#header-bottom-left-up p:first-of-type").innerHTML = "Ремесленная<br>мастерская";
         document.querySelector("#header-bottom-left-up p:last-of-type").innerHTML = "Ивана<br>Куликова";
     }
+    init();
 })
 if(window.screen.width<=960){
     document.querySelector("#header-bottom-left-up p:first-of-type").innerHTML = "Ремесленная мастерская";
@@ -41,6 +42,56 @@ var count = 0; //Подсчет кол-ва блоков с картинками
 var width;
 var height;
 var window1024 = false;
+//Добавление перевижение слайдера с помощью тача
+sliderLine.addEventListener("touchstart", handleTouchStart, false);
+sliderLine.addEventListener("touchmove", handleTouchMover, false);
+//Объявление переменное с x1
+let x1 = null;
+// Функция определения первого тапа
+function handleTouchStart(e){
+    //Записываем в переменную первое нажатие
+    let firstTouch = e.touches[0];
+    //Записываем в переменные X и Y нажатия
+    x1 = firstTouch.clientX;
+}
+//Функция того, что будет происходить при свайпе
+function handleTouchMover(e){
+    //Просмотр было ли зажатие
+    if(!x1){
+        return false;
+    }
+    //Записываем второе нажатие
+    let x2 = e.touches[0].clientX;
+    // console.log(x2,y2);
+    //Понимание куда идет сдвиг
+    let xDiff = x2 - x1; 
+
+    if(xDiff>0){
+        count--;
+        if(count < 0){ //Проверка на то, что счетчик стал не меньше чем 0
+            switch(window1024){
+                case true:
+                    count = images.length - 1; //Сброс счетчика до максимальной картинки
+                case false:
+                    count = images.length - 3; //Сброс счетчика до максимальной картинки
+            }
+        }
+    } else{
+        count++;
+        switch(window1024){
+            case true:
+                if(count >= images.length){ //Проверка на то, что счетчик стал не больше чем кол-во картинок
+                    count = 0; //Сброс счетчика до нуля
+                }
+            case false:
+                if(count >= images.length - 2){ //Проверка на то, что счетчик стал не больше чем кол-во картинок(Отнимается 3, потому что три картинки уже имеются на )
+                    count = 0; //Сброс счетчика до нуля
+                }
+        }
+    }
+    rollSlider();
+    x1 = null;
+}
 //Функция адаптации картинок под div slider
 function init(){
     //Пореврка на размер экрана, для показа одной или трех картинок
@@ -60,8 +111,7 @@ function init(){
     }
     rollSlider(); //Вызов функции, нужно для того, что бы при изменении ширины, картинки не застывали, а уходили в нормальное положение
 }
-//Добавляем функцию адаптации при изменении ширины экрана
-window.addEventListener("resize", init());
+init();
 //Добовляем и пишем функцию для кнопки вправа
 document.querySelector(".slider-next").addEventListener("click", function(){
     count++; //Добовляется один к счетчику
@@ -116,13 +166,12 @@ function rollSlider(){
 let checkbox = document.querySelector("#check"); //Сам чекбокс
 let cusChecbox = document.querySelector("#label"); //Кастомный чекбокс
 checkbox.addEventListener("click", function(){ //Добавляем ивент при наджатие на чекбокс
-    if(checkbox.checked){ //Если чекбокс нажат
+    if(!checkbox.checked){ //Если чекбокс нажат
         cusChecbox.classList.replace("fa-check-square", "fa-square-o"); // Заменяем квадрат на галочку
-        cusChecbox.style.fontSize = "30px";
     } else{
         cusChecbox.classList.replace("fa-square-o", "fa-check-square"); //Заменяем галочку на квадрат
-        cusChecbox.style.fontSize = "30px";
     }
+    cusChecbox.style.fontSize = "25px";
 })
 //-------------------------------------------\/Popup(Модальное окно)\/-------------------------------------------
 let popUpButs = document.querySelectorAll(".openPopUp");

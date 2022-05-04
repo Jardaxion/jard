@@ -1,32 +1,33 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/output.css">
-    <link rel="shortcut icon" href="src/img/icons/avatar.png">
-    <link rel="stylesheet" href="src/font-icons/css/font-awesome.min.css">
-    <title>Ремесленная мастерская</title>
-</head>
+<!DOCTYPE html><!-- Версия HTML -->
+<html lang="ru"> <!-- Тег показывающий начало и конец файла(атрибут lang означает язык сайта(нужен для поисковиков)) -->
+<head> <!-- Не видимый для пользователя контент -->
+    <meta charset="UTF-8"> <!-- Кодировка -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Тип кодировки для сервера -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Размер(Будет ли он адаптироваться под экран пользователя или у него будет определенный размер) -->
+    <link rel="stylesheet" href="dist/output.css"> <!-- Подключение css файла -->
+    <link rel="shortcut icon" href="src/img/icons/avatar.png"> <!-- Подключение мини иконки в названии сайта -->
+    <link rel="stylesheet" href="src/font-icons/css/font-awesome.min.css"><!-- Подключение css файла с иконками в виде шрифта -->
+    <title>Ремесленная мастерская</title> <!-- Название сайта -->
+</head> 
 <body>
-    <nav class="bg-mainGrey w-full lg:py-2 py-1 lg:px-10 px-14  flex flex-row justify-between shadow-shadowBottom z-10">
-        <div id="left-nav">
-            <div id="name-pos" class="flex flex-col justify-center">
+    <!-- Навигация -->
+    <nav class="bg-mainGrey w-full lg:py-2 py-1 lg:px-10 px-14  flex flex-row justify-between shadow-shadowBottom z-10"> 
+        <div id="left-nav"> <!-- Левая часть навигации -->
+            <div id="name-pos" class="flex flex-col justify-center"> <!-- Позиция текста -->
                 <span class="font-bold text-mainOrange absolute lg:text-3xl text-7xl lg:left-36 left-32 lg:top-5 top-3">Ремесленная Мастерская</span>
                 <span class="text-white absolute lg:text-3xl text-7xl lg:left-36 left-32 lg:top-14 top-20">Дом станет уютным!</span>
             </div>
-            <a href="#header"><img src="src/img/icons/avatar.png" alt="" class="lg:w-24 lg:h-24 w-52 h-52"></a>
+            <a href="#header"><img src="src/img/icons/avatar.png" alt="" class="lg:w-24 lg:h-24 w-52 h-52"></a> <!-- Ссылка с картинкой в виде инонки сайта -->
         </div>
-        <div id="right-nav" class="text-white lg:text-3xl flex lg:flex-row items-center">
-            <div id="buger" class="lg:hidden hover:cursor-pointer group">
+        <div id="right-nav" class="text-white lg:text-3xl flex lg:flex-row items-center"> <!-- Правая часть навигации -->
+            <div id="buger" class="lg:hidden hover:cursor-pointer group"> <!-- Иконка бургер меню -->
                 <p class="w-20 h-3 bg-white transition ease-linear duration-300 group-hover:bg-mainOrange group-hover:shadow-shadowButton"></p>
                 <p class="w-20 h-3 bg-white my-4 transition ease-linear duration-300 group-hover:bg-mainOrange group-hover:shadow-shadowButton"></p>
                 <p class="w-20 h-3 bg-white transition ease-linear duration-300 group-hover:bg-mainOrange group-hover:shadow-shadowButton"></p>
             </div>
-            <div id="nav-body" class="lg:block hidden lg:static fixed z-40 left-0 top-0 w-full h-full">
-                <div id="nav-links" class="text-center flex flex-col lg:flex-row justify-center items-center h-full bg-mainGrey text-10xl lg:text-3xl">
-                    <a href="#header" class="lg:hidden lg:mr-5">Главная</a>
+            <div id="nav-body" class="lg:block hidden lg:static fixed z-40 left-0 top-0 w-full h-full"> <!-- Тело ссылок -->
+                <div id="nav-links" class="text-center flex flex-col lg:flex-row justify-center items-center h-full bg-mainGrey text-50px lg:text-3xl"> <!-- Внутрение тело ссылок -->
+                    <a href="#header" class="lg:hidden lg:mr-5">Главная</a> <!-- Ссылка -->
                     <a href="#weCan" class="lg:mr-5 transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Мы можем</a>
                     <a href="#OurAdventages" class="lg:mr-5  transition ease duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Наши приемущества</a>
                     <a href="#WorksExample" class="lg:mr-5  transition ease duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Примеры работ</a>
@@ -35,172 +36,181 @@
             </div>
         </div>
     </nav>
-    <header id="header" class="bg-mainGrey lg:px-10 px-14 py-4">
-        <div id="header-top">
-            <div id="header-profile-line" class="flex flex-row justify-end lg:pb-4">
-                <a href="#profile" class="fa fa-user-circle-o openPopUp text-white lg:before:text-4xl before:text-11xl transition ease-linear duration-300 lg:mr-2 mr-5 hover:text-mainOrange hover:drop-shadow-shadowText"></a>
-                <a href="#login" class="button openPopUp lg:py-1 py-2 lg:px-3 px-8 border rounded-full border-mainOrange text-white lg:text-2xl text-9xl flex items-center lg:mr-2 mr-5  transition ease-linear duration-300 hover:drop-shadow-shadowText hover:bg-mainOrange hover:shadow-shadowButton">Вход</a>
-                <a href="#reg" class="button openPopUp lg:py-1 py-2 lg:px-3 px-8 border rounded-full border-mainOrange text-white lg:text-2xl text-9xl flex items-center transition ease-linear duration-300 hover:drop-shadow-shadowText hover:bg-mainOrange hover:shadow-shadowButton">Регистрация</a>
+    <!-- Главный блок -->
+    <header id="header" class="bg-mainGrey lg:px-10 px-14 py-4"> 
+        <div id="header-top"><!-- Верхняя часть главного блока -->
+            <div id="header-profile-line" class="flex flex-row justify-end lg:pb-4"> <!-- Линия с инкой профиля, регистрации и входом -->
+                <a href="#profile" class="fa fa-user-circle-o self-center openPopUp text-white lg:before:text-4xl before:text-9xl transition ease-linear duration-300 lg:mr-2 mr-5 hover:text-mainOrange hover:drop-shadow-shadowText"></a> <!-- Иконка профиля -->
+                <a href="#login" class="button openPopUp lg:py-1 py-2 lg:px-3 px-8 border rounded-full border-mainOrange text-white lg:text-2xl text-7xl flex items-center lg:mr-2 mr-5  transition ease-linear duration-300 hover:drop-shadow-shadowText hover:bg-mainOrange hover:shadow-shadowButton">Вход</a>
+                <a href="#reg" class="button openPopUp lg:py-1 py-2 lg:px-3 px-8 border rounded-full border-mainOrange text-white lg:text-2xl text-7xl flex items-center transition ease-linear duration-300 hover:drop-shadow-shadowText hover:bg-mainOrange hover:shadow-shadowButton">Регистрация</a>
             </div>
         </div>
-        <div id="header-bottom" class="flex flex-col lg:flex-row justify-between w-full lg:px-28">
-            <div id="header-bottom-left" class="">
-                <div id="header-bottom-left-up" class="font-bold flex flex-col">
-                    <p class="text-mainOrange text-8xl relative lg:right-96 lg:left-0 left-36 lg:text-right">Ремесленная<br>мастерская</p>
+        <div id="header-bottom" class="flex flex-col lg:flex-row justify-between w-full lg:px-28"> <!-- Нижняя часть главного блока -->
+            <div id="header-bottom-left" class=""> <!-- Левая часть -->
+                <div id="header-bottom-left-up" class="font-bold flex flex-col"><!-- Верхняя часть левой части -->
+                    <p class="text-mainOrange text-8xl relative lg:right-64 right-0 lg:text-right">Ремесленная<br>мастерская</p>
                     <p class="text-white text-8xl relative lg:pl-96 lg:left-12 right-36 lg:right-0 lg:bottom-36  text-right uppercase">Ивана<br>Куликова</p>
                     <img src="src/img/icons/avatar.png" alt="" class="lg:hidden lg:w-500px lg:h-500px self-center">
                 </div>
-                <div id="header-bottom-left-bottom">
+                <div id="header-bottom-left-bottom"> <!-- Нижняя часть левой части -->
                     <a href="#zakav" class="button openPopUp lg:py-3 lg:px-16 border lg:rounded-2xl rounded-3xl border-mainOrange text-white lg:text-7xl text-8xl bg-mainOrange flex items-center justify-center uppercase transition ease-linear duration-300 hover:drop-shadow-shadowText hover:bg-mainOrange hover:shadow-shadowButton">Заказать</a>
                 </div>
             </div>
-            <div id="header-bottom-right">
+            <div id="header-bottom-right"> <!-- Правая часть -->
                 <img src="src/img/icons/avatar.png" alt="" class="lg:w-500px lg:h-500px lg:block hidden">
             </div>
         </div>
     </header>
-    <div id="weCan" class="lg:px-10 px-14 lg:py-4">
-        <p class="text-center black lg:text-5xl lg:pb-4">Мы можем</p>
-        <div id="weCan-columns" class="flex flex-row justify-between">
-            <div class="column flex flex-col items-center lg:w-90">
-                <p class="lg:text-4xl lg:pb-4">Придумывать</p>
+    <!-- Блок мы можем -->
+    <div id="weCan" class="lg:px-10 px-14 lg:py-4 py-16"> 
+        <p class="text-center black lg:text-5xl text-10xl lg:pb-4">Мы можем</p>
+        <div id="weCan-columns" class="flex lg:flex-row flex-col lg:justify-between items-center"> <!-- Колонки -->
+            <div class="column flex flex-col items-center lg:w-90 w-1000px"> <!-- Одна колонка -->
+                <p class="lg:text-4xl text-7xl lg:pb-4">Придумывать</p>
                 <img src="src/img/WeCan/invent.png" alt="" class="lg:w-80 h-auto lg:pb-4">
-                <p class="lg:text-4xl text-center">Вы даете нам концепцию, а мы попытаемся исполнить ее</p>
+                <p class="lg:text-4xl text-7xl text-center">Вы даете нам концепцию, а мы попытаемся исполнить ее</p>
             </div>
-            <div class="column flex flex-col items-center lg:w-90">
-                <p class="lg:text-4xl lg:pb-4">Воплощать</p>
+            <div class="column flex flex-col items-center lg:py-0 lg:border-none border-y-4 border-y-mainGrey py-10 lg:w-90 w-1000px"> <!-- Одна колонка -->
+                <p class="lg:text-4xl text-7xl lg:pb-4">Воплощать</p>
                 <img src="src/img/WeCan/Incarnate.png" alt="" class="lg:w-80 h-auto lg:pb-4">
-                <p class="lg:text-4xl text-center">Если вам захотелось повторить проект, то мы вам поможем</p>
+                <p class="lg:text-4xl text-7xl text-center">Если вам захотелось повторить проект, то мы вам поможем</p>
             </div>
-            <div class="column flex flex-col items-center lg:w-90">
-                <p class="lg:text-4xl lg:pb-4">Изменять</p>
+            <div class="column flex flex-col items-center lg:w-90 w-1000px"> <!-- Одна колонка -->
+                <p class="lg:text-4xl text-7xl lg:pb-4">Изменять</p>
                 <img src="src/img/WeCan/Change.png" alt="" class="lg:w-80 h-auto lg:pb-4">
-                <p class="lg:text-4xl text-center">Если вам нужно что-то изменить, мы всегда скоректируем это</p>
+                <p class="lg:text-4xl text-7xl text-center">Если вам нужно что-то изменить, мы всегда скоректируем это</p>
             </div>
         </div>
     </div>
-    <div id="OurAdventages" class="bg-mainGrey lg:py-4 px-14 lg:px-10">
-        <p class="text-white text-center text-5xl pb-4">Наши приемущества</p>
-        <div id="content-OurAdventages" class="flex lg:flex-row justify-center">
-            <div id="left-OurAdventages" class="lg:pr-16 lg:block hidden">
+    <!-- Блок Наши приемущства -->
+    <div id="OurAdventages" class="bg-mainGrey lg:py-4 py-16 px-14 lg:px-10"> 
+        <p class="text-white text-center lg:text-5xl text-10xl pb-4">Наши приемущества</p>
+        <div id="content-OurAdventages" class="flex lg:flex-row justify-center"><!-- Основной контент -->
+            <div id="left-OurAdventages" class="lg:pr-16 lg:block hidden"> <!-- Левая часть -->
                 <img src="src/img/OurAdvantages.png" alt="" class="lg:w-500px h-auto">
             </div>
-            <div id="right-OurAdventages" class="flex flex-row items-center">
-                <ul class="lg:list-disc lg:w-700px text-white lg:text-4xl">
-                    <li class="lg:pb-5">В отличии от ручной резки, лазерной резкой удобнее и быстрее вырезаются изделия, т.е. вам не придется долго ждать одного из изделий.</li>
-                    <li class="lg:pb-5">Мы можем создавать сложные изделия из более легких с помощью прямых рук и станка для лазерной резки дерева</li>
-                    <li class="lg:pb-5">Мы быстро воплощаем в жизнь ваши заказы.</li>
-                    <li>Мы всегда готовы к обратной связи</li>
+            <div id="right-OurAdventages" class="flex flex-row items-center"> <!-- Правая часть -->
+                <ul class="lg:list-disc lg:w-700px w-701px text-white lg:text-left text-center lg:text-4xl text-8xl"> <!-- Не номированный список -->
+                    <li class="lg:pb-5 lg:pt-0 py-11 lg:border-none  border-b border-mainOrange">В отличии от ручной резки, лазерной резкой удобнее и быстрее вырезаются изделия, т.е. вам не придется долго ждать одного из изделий.</li>
+                    <li class="lg:pb-5  lg:pt-0 py-11 lg:border-none  border-b border-mainOrange">Мы можем создавать сложные изделия из более легких с помощью прямых рук и станка для лазерной резки дерева</li>
+                    <li class="lg:pb-5  lg:pt-0 py-11 lg:border-none border-b border-mainOrange">Мы быстро воплощаем в жизнь ваши заказы.</li>
+                    <li class="py-11 lg:py-0">Мы всегда готовы к обратной связи</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div id="WorksExample" class="lg:py-4 lg:px-10 px-14">
-        <p class="text-center lg:text-5xl lg:pb-4">Примеры</p>
-        <div id="all_slider" class="flex flex-row justify-center lg:text-6xl">
-            <p class="fa fa-chevron-left slider-prev chervon self-center lg:pr-7 hover:cursor-pointer transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText"></p>
-            <div class="slider">
-                <div class="slider-line">
-                    <img src="src/img/slider/1.png" alt="Первая картинка" data-carousel-item>
-                    <img src="src/img/slider/2.png" alt="Вторая картинка" data-carousel-item>
-                    <img src="src/img/slider/3.png" alt="Третья картинка" data-carousel-item>
-                    <img src="src/img/slider/4.png" alt="Четвертая картинка" data-carousel-item>
-                    <img src="src/img/slider/5.png" alt="Пятая картинка" data-carousel-item>
-                    <img src="src/img/slider/6.png" alt="Шестная картинка" data-carousel-item>
-                    <img src="src/img/slider/7.png" alt="Седьмая картинка" data-carousel-item>
-                    <img src="src/img/slider/8.png" alt="Восьмая картинка" data-carousel-item>
-                    <img src="src/img/slider/9.png" alt="Девятая картинка" data-carousel-item>
+     <!-- Блок примеры работ -->
+    <div id="WorksExample" class="lg:py-4 py-16 lg:px-10 px-14">
+        <p class="text-center lg:text-5xl text-10xl lg:pb-4">Примеры</p>
+        <div id="all_slider" class="flex flex-row justify-center lg:text-6xl text-10xl"> <!-- Блок со слайдером -->
+            <p class="fa fa-chevron-left slider-prev chervon self-center lg:pr-7 pr-16 hover:cursor-pointer transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText"></p> <!-- Стрелка влево -->
+            <div class="slider"> <!-- Тело слайдера -->
+                <div class="slider-line"> <!-- Линия слайдера с картинками -->
+                    <img src="src/img/slider/1.png" alt="Первая картинка"> <!-- Картинка -->
+                    <img src="src/img/slider/2.png" alt="Вторая картинка">
+                    <img src="src/img/slider/3.png" alt="Третья картинка">
+                    <img src="src/img/slider/4.png" alt="Четвертая картинка">
+                    <img src="src/img/slider/5.png" alt="Пятая картинка">
+                    <img src="src/img/slider/6.png" alt="Шестная картинка">
+                    <img src="src/img/slider/7.png" alt="Седьмая картинка">
+                    <img src="src/img/slider/8.png" alt="Восьмая картинка">
+                    <img src="src/img/slider/9.png" alt="Девятая картинка">
                 </div>
             </div>
-            <p class="fa fa-chevron-right slider-next chervon self-center lg:pl-7 hover:cursor-pointer transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText"></p>
+            <p class="fa fa-chevron-right slider-next chervon self-center lg:pl-7 pl-16 hover:cursor-pointer transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText"></p> <!-- Стрелка вправо -->
         </div>
     </div>
-    <div id="map" class="lg:py-4 lg:px-10 px-14 bg-mainGrey">
-        <p class="text-center text-white lg:text-5xl lg:pb-4">Карта</p>
-        <div id="mapPosition" class="flex flex-row justify-center">
+     <!-- Блок с картой -->
+    <div id="map" class="lg:py-4 py-16 lg:px-10 px-14 bg-mainGrey">
+        <p class="text-center text-white lg:text-5xl text-10xl lg:pb-4">Карта</p>
+        <div id="mapPosition" class="lg:flex flex-row justify-center hidden"> <!-- Блок для задания позиции интерактивной карте -->
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3e45cb3de0d9adb3ff022095f13b17dfa7cbce0ac2fb9a967ee10e2d6a5fb0b8&amp;width=62.29vw&amp;height=28.02vw&amp;lang=ru_RU&amp;scroll=true"></script> <!-- JS карты от Yandex -->
         </div>
-    </div>
-    <footer id="footer" class="bg-black lg:py-4 lg:px-10 px-14 text-white">
-        <div id="up-footer" class="flex flex-row justify-center lg:pb-4">
-            <a href="#header" class="lg:text-3xl lg:mr-10 transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Главная</a>
-            <a href="#weCan" class="lg:text-3xl lg:mr-10  transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Мы можем</a>
-            <a href="#OurAdventages" class="lg:text-3xl lg:mr-10  transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Наши приемущества</a>
-            <a href="#WorksExample" class="lg:text-3xl lg:mr-10  transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Примеры</a>
-            <a href="#map" class="lg:text-3xl transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Карта</a>
+        <div id="mapPoisitionMobile" class="flex flex-row justify-center lg:hidden"> <!-- Позиция карты для мобильных устройств -->
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3e45cb3de0d9adb3ff022095f13b17dfa7cbce0ac2fb9a967ee10e2d6a5fb0b8&amp;width=800&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script> <!-- JS карты от Yandex -->
         </div>
-        <div id="down-footer" class="flex lg:flex-row justify-between">
-            <div id="left-down-footer">
-                <p class="lg:text-4xl">Наши контакты</p>
-                <p class="lg:text-2xl"><span class="fa fa-phone lg:before:text-2xl lg:before:pr-3"></span>8-800-555-35-35</p>
-                <p class="lg:text-2xl"><span class="fa fa-envelope-o lg:before:text-2xl lg:before:pr-3"></span>bainthecreator21@gmail.com</p>
+    </div>
+     <!-- Футер -->
+    <footer id="footer" class="bg-black lg:py-4 py-16 lg:px-10 px-14 text-white">
+        <div id="up-footer" class="flex lg:flex-row flex-col lg:justify-center items-center lg:pb-4"> <!-- Верхняя часть футера с ссылками -->
+            <a href="#header" class="lg:text-3xl text-8xl lg:mr-10 transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Главная</a>
+            <a href="#weCan" class="lg:text-3xl text-8xl lg:mr-10  transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Мы можем</a>
+            <a href="#OurAdventages" class="lg:text-3xl text-8xl lg:mr-10  transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Наши приемущества</a>
+            <a href="#WorksExample" class="lg:text-3xl text-8xl lg:mr-10  transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Примеры</a>
+            <a href="#map" class="lg:text-3xl text-8xl transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText">Карта</a>
+        </div>
+        <div id="down-footer" class="flex lg:pt-0 pt-10 lg:flex-row flex-col lg:justify-between items-center text-center"> <!-- Нижняя часть футера с контктами и ссылкой на соц сети -->
+            <div id="left-down-footer" class="lg:pb-0 pb-10"> <!-- Левая часть с контактами -->
+                <p class="lg:text-4xl text-8xl">Наши контакты</p>
+                <p class="lg:text-2xl text-7xl"><span class="fa fa-phone lg:before:text-2xl before:pr-3"></span>8-800-555-35-35</p>
+                <p class="lg:text-2xl text-7xl"><span class="fa fa-envelope-o lg:before:text-2xl before:pr-3"></span>bainthecreator21@gmail.com</p>
             </div>
-            <div id="center-down-footer">
-                <p class="lg:text-4xl text-center">Наши соцсети</p>
+            <div id="center-down-footer" class="lg:pb-0 pb-10"> <!-- Центральная часть с ссылками на соц сети -->
+                <p class="lg:text-4xl text-8xl text-center">Наши соцсети</p>
                 <div id="center-down-footer__links" class="flex flex-row justify-center">
-                    <a href="https://vk.com/dekor_novosibirsk" target="_blank" class="fa fa-vk lg:before:text-3xl transition ease-linear duration-300 hover:scale-125 hover:text-vk hover:drop-shadow-shadowVk active:text-vkDark active:drop-shadow-shadowDarkVk"></a>
-                    <a href="https://www.instagram.com/dekor_novosibirsk/" target="_blank" class="fa fa-instagram lg:before:text-3xl lg:px-2 transition ease-linear duration-300 hover:scale-125 hover:text-instagramm hover:drop-shadow-shadowInst active:text-instagrammDark active:drop-shadow-shadowDarkInst"></a>
-                    <a href="https://t.me/Dekor_NSK" target="_blank" class="fa fa-telegram lg:before:text-3xl transition ease-linear duration-300 hover:scale-125 hover:text-telegram hover:drop-shadow-shadowTeleg active:text-telegramDark active:drop-shadow-shadowDarkTeleg"></a>
+                    <a href="https://vk.com/dekor_novosibirsk" target="_blank" class="fa fa-vk lg:before:text-3xl before:text-8xl transition ease-linear duration-300 hover:scale-125 hover:text-vk hover:drop-shadow-shadowVk active:text-vkDark active:drop-shadow-shadowDarkVk"></a>
+                    <a href="https://www.instagram.com/dekor_novosibirsk/" target="_blank" class="fa fa-instagram lg:before:text-3xl before:text-8xl lg:px-2 px-10 transition ease-linear duration-300 hover:scale-125 hover:text-instagramm hover:drop-shadow-shadowInst active:text-instagrammDark active:drop-shadow-shadowDarkInst"></a>
+                    <a href="https://t.me/Dekor_NSK" target="_blank" class="fa fa-telegram lg:before:text-3xl before:text-8xl transition ease-linear duration-300 hover:scale-125 hover:text-telegram hover:drop-shadow-shadowTeleg active:text-telegramDark active:drop-shadow-shadowDarkTeleg"></a>
                 </div>
             </div>
-            <div id="right-down-footer" class="text-right flex flex-col">
-                <p class="lg:text-4xl">&#169;Петелин Семен</p>
-                <p class="lg:text-2xl">2022г.</p>
+            <div id="right-down-footer" class="lg:text-right flex flex-col lg:pb-0 pb-10"> <!-- Копирайт -->
+                <p class="lg:text-4xl text-8xl">&#169;Петелин Семен</p>
+                <p class="lg:text-2xl text-7xl">2022г.</p>
             </div>
         </div>
     </footer>
     <!--Модальные окна-->
     <!-- Регистрация -->
-    <div id="reg" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black">
-        <div id="modalBody" class="flex h-full justify-center items-center">
-            <div id="modalContent" class="border-4 border-mainOrange bg-mainGrey rounded-3xl px-52 py-6 w-full mx-96">
-                <div id="modalContent-top" class="flex flex-row justify-center w-full mb-8">
-                    <p class="text-white text-5xl">Регистрация</p>
-                    <a id="regBut" class="fa fa-times exit text-white before:text-4xl relative bottom-7 left-437px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
+    <div id="reg" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black"> <!-- Задний фон -->
+        <div id="modalBody" class="flex h-full justify-center items-center"> <!-- Тело -->
+            <div id="modalContent" class="lg:border-4 border-4mini border-mainOrange bg-mainGrey lg:rounded-3xl rounded-4xl lg:px-52 px-186px py-2 mx-96"> <!-- Контент -->
+                <div id="modalContent-top" class="flex flex-row justify-center w-full lg:mb-8 mb-10"> <!-- Верхняя часть -->
+                    <p class="text-white lg:text-5xl text-8xl">Регистрация</p>
+                    <a id="regBut" class="fa fa-times exit text-white lg:before:text-4xl before:text-8xl relative bottom-7 lg:left-437px left-282px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
                 </div>
-                <div id="modalContent-bottom">
-                    <form action="" method="post" class="flex flex-col">
-                        <input type="text" placeholder="Введите логин" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Введите Фамилию и Имя" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Введите номер телефона" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Введите email" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Введите пароль" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Повторно введите пароль" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                <div id="modalContent-bottom"> <!-- Нижняя часть -->
+                    <form action="" method="post" class="flex flex-col"> <!-- Форма -->
+                        <input type="text" placeholder="Введите логин" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Введите Фамилию и Имя" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Введите номер телефона" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Введите email" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Введите пароль" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Повторно введите пароль" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
                         <label for="check" class="mb-5">
                             <input type="checkbox" class="hidden" id="check" checked>
-                            <p class="hover:cursor-pointer transition ease-linear duration-300 text-white text-3xl hover:text-mainOrange hover:drop-shadow-shadowText select-none"><span class="fa fa-check-square" id="label"></span> Я соглашаюсь с обработкой своих персональных данных</p>
+                            <p class="hover:cursor-pointer transition ease-linear duration-300 text-mainOrange lg:text-3xl text-25px hover:text-mainOrange hover:drop-shadow-shadowText select-none"><span class="fa fa-check-square" id="label"></span> Я соглашаюсь с обработкой своих персональных данных</p>
                         </label>
-                        <input type="submit" value="Зарегестрироваться" class="button h-16 mb-3 text-4xl outline-none transition ease-linear duration-300 border border-mainOrange rounded-full bg-mainOrange text-white hover:cursor-pointer hover:shadow-shadowButton"> 
+                        <input type="submit" value="Зарегестрироваться" class="button lg:h-16 h-65px lg:w-auto w-520px mb-3 lg:text-4xl text-25px outline-none transition ease-linear duration-300 border border-mainOrange rounded-full bg-mainOrange text-white hover:cursor-pointer hover:shadow-shadowButton"> 
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Вход -->
-    <div id="login" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black">
-        <div id="modalBody" class="flex h-full justify-center items-center">
-            <div id="modalContent" class="border-4 border-mainOrange bg-mainGrey rounded-3xl px-52 py-6 w-full mx-96">
-                <div id="modalContent-top" class="flex flex-row justify-center w-full mb-8">
-                    <p class="text-white text-5xl">Вход</p>
-                    <a id="loginBut" class="fa fa-times exit text-white before:text-4xl relative bottom-7 left-489px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
+    <div id="login" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black"> <!-- Задний фон -->
+        <div id="modalBody" class="flex h-full justify-center items-center"> <!-- Тело -->
+            <div id="modalContent" class="lg:border-4 border-4mini border-mainOrange bg-mainGrey lg:rounded-3xl rounded-4xl lg:px-52 px-186px py-2 mx-96"> <!-- Контент -->
+                <div id="modalContent-top" class="flex flex-row justify-center w-full lg:mb-8 mb-10"> <!-- Верхняя часть -->
+                    <p class="text-white lg:text-5xl text-8xl">Вход</p>
+                    <a id="loginBut" class="fa fa-times exit text-white lg:before:text-4xl before:text-8xl relative bottom-7 lg:left-437px left-365px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
                 </div>
-                <div id="modalContent-bottom">
-                    <form action="" method="post" class="flex flex-col">
-                        <input type="text" placeholder="Введите логин" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Введите пароль" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="submit" value="Войти" class="button h-16 mb-3 text-4xl outline-none transition ease-linear duration-300 border border-mainOrange rounded-full bg-mainOrange text-white hover:cursor-pointer hover:shadow-shadowButton"> 
+                <div id="modalContent-bottom"> <!-- Нижняя часть -->
+                    <form action="" method="post" class="flex flex-col"> <!-- Форма -->
+                        <input type="text" placeholder="Введите логин" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-700px w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Введите пароль" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="submit" value="Войти" class="button lg:h-16 h-65px lg:w-auto w-520px mb-3 lg:text-4xl text-25px outline-none transition ease-linear duration-300 border border-mainOrange rounded-full bg-mainOrange text-white hover:cursor-pointer hover:shadow-shadowButton"> 
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Профиль -->
-    <div id="profile" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black">
-        <div id="modalBody" class="flex h-full justify-center items-center">
-            <div id="modalContent" class="border-4 border-mainOrange bg-mainGrey rounded-3xl px-52 py-6 w-full mx-96">
-                <div id="modalContent-top" class="flex flex-row justify-center w-full mb-8">
-                    <p class="text-white text-5xl">Вход</p>
-                    <a id="profileBut" class="fa fa-times exit text-white before:text-4xl relative bottom-7 left-489px   self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
+    <div id="profile" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black"> <!-- Зданий фон -->
+        <div id="modalBody" class="flex h-full justify-center items-center"> <!-- Тело -->
+            <div id="modalContent" class="lg:border-4 border-4mini border-mainOrange bg-mainGrey lg:rounded-3xl rounded-4xl lg:px-52 px-186px py-2 mx-96"> <!-- Контент -->
+                <div id="modalContent-top" class="flex flex-row justify-center w-full mb-8"> <!-- Верхняя часть -->
+                    <p class="text-white lg:text-5xl text-8xl">Профиль</p>
+                    <a id="profileBut" class="fa fa-times exit text-white lg:before:text-4xl before:text-8xl relative bottom-7 lg:left-437px left-365px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
                 </div>
             </div>
         </div>
@@ -208,16 +218,16 @@
     <!-- Заказть -->
     <div id="zakav" class="fixed disactive top-0 right-0 z-50 w-full h-full bg-opacity-50 bg-black">
         <div id="modalBody" class="flex h-full justify-center items-center">
-            <div id="modalContent" class="border-4 border-mainOrange bg-mainGrey rounded-3xl px-52 py-6 w-full mx-96">
+            <div id="modalContent" class="lg:border-4 border-4mini border-mainOrange bg-mainGrey lg:rounded-3xl rounded-4xl lg:px-52 px-186px py-2 mx-96">
                 <div id="modalContent-top" class="flex flex-row justify-center w-full mb-8">
-                    <p class="text-white text-5xl">Введите ваши данные</p>
-                    <a id="zakavBut" class="fa fa-times exit text-white before:text-4xl relative bottom-7 left-307px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
+                    <p class="text-white lg:text-5xl text-8xl">Введите ваши данные</p>
+                    <a id="zakavBut" class="fa fa-times exit text-white lg:before:text-4xl before:text-8xl relative bottom-7 lg:left-437px left-437px self-center justify-self-end transition ease-linear duration 300 hover:text-mainOrange hover:drop-shadow-shadowText" href="#reg"></a>
                 </div>
                 <div id="modalContent-bottom">
                     <form action="" method="post" class="flex flex-col">
-                        <input type="text" placeholder="Введите ваши Имя и Фамилию" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="text" placeholder="Введите ваш номер телефона" class="mb-5 outline-none text-2xl rounded-full h-16 border-4 border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
-                        <input type="submit" value="Отправить" class="button h-16 mb-3 text-4xl outline-none transition ease-linear duration-300 border border-mainOrange rounded-full bg-mainOrange text-white hover:cursor-pointer hover:shadow-shadowButton"> 
+                        <input type="text" placeholder="Введите ваши Имя и Фамилию" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="text" placeholder="Введите ваш номер телефона" class="mb-5 outline-none lg:text-2xl text-25px rounded-full lg:h-16 h-65px lg:w-auto w-520px lg:border-4 border-4mini border-mainOrange pl-5 transition ease-linear duration-300 hover:shadow-shadowButton focus:shadow-shadowButton">
+                        <input type="submit" value="Отправить" class="button lg:h-16 h-65px lg:w-auto w-520px mb-3 lg:text-4xl text-25px outline-none transition ease-linear duration-300 border border-mainOrange rounded-full bg-mainOrange text-white hover:cursor-pointer hover:shadow-shadowButton"> 
                     </form>
                 </div>
             </div>
