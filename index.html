@@ -4,9 +4,9 @@
     <meta charset="UTF-8"> <!-- Кодировка -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Тип кодировки для сервера -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Размер(Будет ли он адаптироваться под экран пользователя или у него будет определенный размер) -->
-    <link rel="stylesheet" href="../dist/output.css"> <!-- Подключение css файла -->
-    <link rel="shortcut icon" href="img/icons/avatar.png"> <!-- Подключение мини иконки в названии сайта -->
-    <link rel="stylesheet" href="font-icons/css/font-awesome.min.css"><!-- Подключение css файла с иконками в виде шрифта -->
+    <link rel="stylesheet" href="dist/output.css"> <!-- Подключение css файла -->
+    <link rel="shortcut icon" href="src/img/icons/avatar.png"> <!-- Подключение мини иконки в названии сайта -->
+    <link rel="stylesheet" href="src/font-icons/css/font-awesome.min.css"><!-- Подключение css файла с иконками в виде шрифта -->
     <title>Ремесленная мастерская</title> <!-- Название сайта -->
 </head> 
 <body>
@@ -17,7 +17,7 @@
                 <span class="font-bold text-mainOrange absolute lg:text-3xl text-7xl lg:left-36 left-32 lg:top-5 top-3">Ремесленная Мастерская</span>
                 <span class="text-white absolute lg:text-3xl text-7xl lg:left-36 left-32 lg:top-14 top-20">Дом станет уютным!</span>
             </div>
-            <a href="#header"><img src="img/icons/avatar.png" alt="" class="lg:w-24 lg:h-24 w-52 h-52"></a> <!-- Ссылка с картинкой в виде инонки сайта -->
+            <a href="#header"><img src="src/img/icons/avatar.png" alt="" class="lg:w-24 lg:h-24 w-52 h-52"></a> <!-- Ссылка с картинкой в виде инонки сайта -->
         </div>
         <div id="right-nav" class="text-white lg:text-3xl flex lg:flex-row items-center"> <!-- Правая часть навигации -->
             <div id="buger" class="lg:hidden hover:cursor-pointer group"> <!-- Иконка бургер меню -->
@@ -50,14 +50,14 @@
                 <div id="header-bottom-left-up" class="font-bold flex flex-col"><!-- Верхняя часть левой части -->
                     <p class="text-mainOrange text-8xl relative lg:right-64 right-0 lg:text-right">Ремесленная<br>мастерская</p>
                     <p class="text-white text-8xl relative lg:pl-96 lg:left-12 right-36 lg:right-0 lg:bottom-36  text-right uppercase">Ивана<br>Куликова</p>
-                    <img src="img/icons/avatar.png" alt="" class="lg:hidden lg:w-500px lg:h-500px self-center">
+                    <img src="src/img/icons/avatar.png" alt="" class="lg:hidden lg:w-500px lg:h-500px self-center">
                 </div>
                 <div id="header-bottom-left-bottom"> <!-- Нижняя часть левой части -->
                     <a href="#zakav" class="button openPopUp lg:py-3 lg:px-16 border lg:rounded-2xl rounded-3xl border-mainOrange text-white lg:text-7xl text-8xl bg-mainOrange flex items-center justify-center uppercase transition ease-linear duration-300 hover:drop-shadow-shadowText hover:bg-mainOrange hover:shadow-shadowButton">Заказать</a>
                 </div>
             </div>
             <div id="header-bottom-right"> <!-- Правая часть -->
-                <img src="img/icons/avatar.png" alt="" class="lg:w-500px lg:h-500px lg:block hidden">
+                <img src="src/img/icons/avatar.png" alt="" class="lg:w-500px lg:h-500px lg:block hidden">
             </div>
         </div>
     </header>
@@ -67,17 +67,17 @@
         <div id="weCan-columns" class="flex lg:flex-row flex-col lg:justify-between items-center lg:items-start"> <!-- Колонки -->
             <div class="column flex flex-col items-center lg:w-90 w-1000px"> <!-- Одна колонка -->
                 <p class="lg:text-4xl text-7xl lg:pb-4">Придумывать</p>
-                <img src="img/WeCan/invent.png" alt="" class="lg:w-80 h-auto lg:pb-4">
+                <img src="src/img/WeCan/invent.png" alt="" class="lg:w-80 h-auto lg:pb-4">
                 <p class="lg:text-4xl text-7xl text-center">Вы даете нам концепцию, а мы попытаемся исполнить ее</p>
             </div>
             <div class="column flex flex-col items-center lg:py-0 lg:border-none border-y-4 border-y-mainGrey py-10 lg:w-90 w-1000px"> <!-- Одна колонка -->
                 <p class="lg:text-4xl text-7xl lg:pb-4">Воплощать</p>
-                <img src="img/WeCan/Incarnate.png" alt="" class="lg:w-80 h-auto lg:pb-4">
+                <img src="src/img/WeCan/Incarnate.png" alt="" class="lg:w-80 h-auto lg:pb-4">
                 <p class="lg:text-4xl text-7xl text-center">Если вам захотелось повторить проект, то мы вам поможем</p>
             </div>
             <div class="column flex flex-col items-center lg:w-90 w-1000px"> <!-- Одна колонка -->
                 <p class="lg:text-4xl text-7xl lg:pb-4">Изменять</p>
-                <img src="img/WeCan/Change.png" alt="" class="lg:w-80 h-auto lg:pb-4">
+                <img src="src/img/WeCan/Change.png" alt="" class="lg:w-80 h-auto lg:pb-4">
                 <p class="lg:text-4xl text-7xl text-center">Если вам нужно что-то изменить, мы всегда скоректируем это</p>
             </div>
         </div>
@@ -87,7 +87,7 @@
         <p class="text-white text-center lg:text-5xl text-10xl pb-4">Наши приемущества</p>
         <div id="content-OurAdventages" class="flex lg:flex-row justify-center"><!-- Основной контент -->
             <div id="left-OurAdventages" class="lg:pr-16 lg:flex hidden items-center"> <!-- Левая часть -->
-                <img src="img/OurAdvantages.png" alt="" class="lg:w-500px h-auto">
+                <img src="src/img/OurAdvantages.png" alt="" class="lg:w-500px h-auto">
             </div>
             <div id="right-OurAdventages" class="flex flex-row items-center"> <!-- Правая часть -->
                 <ul class="lg:list-disc lg:w-700px w-701px text-white lg:text-left text-center lg:text-4xl text-8xl"> <!-- Не номированный список -->
@@ -106,15 +106,15 @@
             <p class="fa fa-chevron-left slider-prev chervon self-center lg:pr-7 pr-16 hover:cursor-pointer transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText"></p> <!-- Стрелка влево -->
             <div class="slider"> <!-- Тело слайдера -->
                 <div class="slider-line"> <!-- Линия слайдера с картинками -->
-                    <img src="img/slider/1.png" alt="Первая картинка"> <!-- Картинка -->
-                    <img src="img/slider/2.png" alt="Вторая картинка">
-                    <img src="img/slider/3.png" alt="Третья картинка">
-                    <img src="img/slider/4.png" alt="Четвертая картинка">
-                    <img src="img/slider/5.png" alt="Пятая картинка">
-                    <img src="img/slider/6.png" alt="Шестная картинка">
-                    <img src="img/slider/7.png" alt="Седьмая картинка">
-                    <img src="img/slider/8.png" alt="Восьмая картинка">
-                    <img src="img/slider/9.png" alt="Девятая картинка">
+                    <img src="src/img/slider/1.png" alt="Первая картинка"> <!-- Картинка -->
+                    <img src="src/img/slider/2.png" alt="Вторая картинка">
+                    <img src="src/img/slider/3.png" alt="Третья картинка">
+                    <img src="src/img/slider/4.png" alt="Четвертая картинка">
+                    <img src="src/img/slider/5.png" alt="Пятая картинка">
+                    <img src="src/img/slider/6.png" alt="Шестная картинка">
+                    <img src="src/img/slider/7.png" alt="Седьмая картинка">
+                    <img src="src/img/slider/8.png" alt="Восьмая картинка">
+                    <img src="src/img/slider/9.png" alt="Девятая картинка">
                 </div>
             </div>
             <p class="fa fa-chevron-right slider-next chervon self-center lg:pl-7 pl-16 hover:cursor-pointer transition ease-linear duration-300 hover:text-mainOrange hover:drop-shadow-shadowText"></p> <!-- Стрелка вправо -->
@@ -249,6 +249,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>
